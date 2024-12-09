@@ -1,0 +1,94 @@
+/* Garante que o body ocupe toda a altura da tela */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima para ocupar a tela inteira */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Main (conteúdo principal) ocupa o espaço restante */
+main {
+    flex: 1; /* Faz o main expandir para preencher o espaço disponível */
+}
+
+/* Rodapé */
+.footer {
+    position: fixed; /* Fixa o rodapé no final da tela */
+    bottom: 0; /* Posiciona o rodapé na parte inferior */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    background-color: #001125; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem; /* Espaçamento interno */
+    border-top: 4px solid #fff; /* Linha no topo do rodapé */
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilos para os parágrafos */
+.footer p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+/* Ícones no rodapé */
+.footer .icons {
+    display: flex; /* Layout flexível */
+    gap: 1rem; /* Espaçamento entre os ícones */
+    margin-top: 1.5rem;
+}
+
+.footer .icons a {
+    color: #fff; /* Cor dos ícones */
+    font-size: 2rem; /* Tamanho dos ícones */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.footer .icons a:hover {
+    color: #7DD1F5; /* Cor de destaque ao passar o mouse */
+}
+
+.footer a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1rem; /* Reduz o espaçamento interno */
+        flex-direction: column; /* Coloca os itens em coluna */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer .icons {
+        gap: 0.75rem; /* Reduz o espaçamento entre os ícones */
+    }
+
+    .footer .icons a {
+        font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 0.9rem; /* Texto menor */
+    }
+
+    .footer .icons {
+        gap: 0.5rem; /* Menos espaço entre os ícones */
+    }
+
+    .footer .icons a {
+        font-size: 1.2rem; /* Ícones menores */
+    }
+}
